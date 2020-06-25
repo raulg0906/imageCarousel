@@ -1,0 +1,106 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body{
+    z-index: 1;
+    font-family: sans-serif;
+}
+
+#slideshow {
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+#slideshow button{
+    position: absolute;
+    background: #333;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    height: 100px;
+    line-height: 70px;
+    width: 50px;
+    border: 0;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer;
+    opacity: .2;
+    z-index: 100;
+}
+
+#slideshow button:hover{
+    opacity: 1;
+}
+
+#left{
+    left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+
+#right{
+        right: 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    
+}
+
+#slideshow img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#reference{
+    position: absolute;
+    bottom:20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    background: rgba(0,0,0, .4);
+    padding: 5px;
+}
+
+#reference a{
+    color: white;
+    
+}
+
+#images{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.image{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 1s;
+
+}
+
+.show{
+    opacity: 1;
+}
